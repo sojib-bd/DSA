@@ -17,9 +17,9 @@ function findSmallest(array){
 function sortArray(array){
     let newArr = [];
     let copyArr = [...array]; //copy the original array before mutating
-   while(copyArr.length > 0) {
+    while(copyArr.length > 0) {
     let smallest = findSmallest(copyArr);
-    newArr.push(...copyArr.splice(smallest,1));
+    newArr.push(...copyArr.splice(smallest,1));// splice will create nested array which why use the spread operator.
    }
     return newArr
 }
